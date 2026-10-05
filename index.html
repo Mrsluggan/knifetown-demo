@@ -144,7 +144,23 @@ body.lunch .item.no-lunch{opacity:.35}
 .place .btn.line:hover{background:var(--black);color:var(--bone)}
 @media (max-width:860px){.place .wrap{grid-template-columns:1fr}}
 
-.map iframe{width:100%;height:380px;border:0;display:block;filter:grayscale(1) contrast(1.1)}
+.map iframe{width:100%;height:380px;border:0;display:block}
+
+/* kontakt */
+.contact .wrap{display:grid;grid-template-columns:.8fr 1.2fr;gap:56px;align-items:start}
+.contact p.lead{color:var(--muted);max-width:36ch;margin:18px 0 0}
+.contact p.lead b{color:var(--bone)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form label{display:grid;gap:8px;font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase}
+form label.full{grid-column:1 / -1}
+form input,form select,form textarea{font:17px var(--body);color:var(--bone);background:var(--ink);border:2px solid #3a3632;padding:13px 14px;border-radius:0;width:100%}
+form textarea{min-height:150px;resize:vertical}
+form input:focus,form select:focus,form textarea:focus{outline:none;border-color:var(--cheddar)}
+form .req{color:var(--cheddar)}
+form button.btn{justify-self:start;cursor:pointer;font-family:var(--head)}
+.sent{grid-column:1 / -1;margin:0;padding:16px 18px;border:2px solid var(--cheddar);color:var(--bone);display:none}
+.sent.show{display:block}
+@media (max-width:760px){.contact .wrap{grid-template-columns:1fr;gap:30px}form{grid-template-columns:1fr}}
 
 footer{padding:40px 0 110px;color:var(--muted);font-size:14px}
 footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
@@ -170,6 +186,7 @@ footer .social a:hover{color:var(--cheddar)}
       <a href="#meny">Meny</a>
       <a href="#utmarkelser">Utmärkelser</a>
       <a href="#hitta">Hitta hit</a>
+      <a href="#kontakt">Kontakt</a>
     </nav>
     <span class="status" id="status">Öppet 10–20</span>
     <a class="btn" href="https://qopla.com/restaurant/knifetown-burgers-/qQALLpRyEO/order" target="_blank" rel="noopener"><span>Beställ</span></a>
@@ -306,6 +323,28 @@ footer .social a:hover{color:var(--cheddar)}
 </section>
 
 <div class="map"><iframe title="Karta till Knifetown Burgers" loading="lazy" src="https://www.google.com/maps?q=Kungs%C3%A4ngsv%C3%A4gen+19B,+753+23+Uppsala&output=embed"></iframe></div>
+
+<section class="contact" id="kontakt">
+  <div class="wrap">
+    <div>
+      <h2>Kontakt</h2>
+      <p class="lead">Skriv ditt meddelande så hör vi av oss så snart vi kan. <b>Beställningar görs inte här</b>, utan via knappen Beställ online.</p>
+    </div>
+    <form id="contact-form" novalidate>
+      <label class="full"><span>Typ av meddelande <span class="req">*</span></span>
+        <select name="typ" required>
+          <option>Vanlig fråga</option>
+          <option>Fel på hemsidan (inte beställningar via Qopla)</option>
+        </select>
+      </label>
+      <label><span>E-post <span class="req">*</span></span><input type="email" name="epost" required autocomplete="email"></label>
+      <label><span>Telefon</span><input type="tel" name="telefon" autocomplete="tel"></label>
+      <label class="full"><span>Meddelande <span class="req">*</span></span><textarea name="meddelande" required></textarea></label>
+      <button class="btn" type="submit"><span>Skicka meddelande</span></button>
+      <p class="sent" id="sent" role="status"></p>
+    </form>
+  </div>
+</section>
 </main>
 
 <footer>
@@ -333,6 +372,16 @@ document.querySelectorAll(".switch button").forEach(b => b.addEventListener("cli
   });
   note.textContent = lunch ? "Alla dagar 10–15. Pommes och dryck ingår till burgarna." : "";
 }));
+
+// kontaktformulär – demo, skickar inget
+const form = document.getElementById("contact-form"), sent = document.getElementById("sent");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  sent.textContent = "Tack! Det här är en demo, så meddelandet skickades inte någonstans.";
+  sent.classList.add("show");
+  form.reset();
+});
 
 // öppet nu
 (() => {
