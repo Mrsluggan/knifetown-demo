@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Knifetown Burgers – Uppsala</title>
+<meta name="description" content="Burgare på svenskt nötkött på Kungsängsvägen 19B i Uppsala. Plats 5 på Sveriges 100 bästa burgare 2024. Beställ online.">
+<link rel="icon" href="../img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Knifetown Burgers",
+  "servesCuisine": "Hamburgare",
+  "address": {"@type": "PostalAddress", "streetAddress": "Kungsängsvägen 19B", "postalCode": "753 23", "addressLocality": "Uppsala", "addressCountry": "SE"},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Sunday"], "opens": "10:00", "closes": "20:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "10:00", "closes": "21:00"}
+  ],
+  "sameAs": ["https://www.instagram.com/knifetownburgers/", "https://www.facebook.com/profile.php?id=100063505151036"]
+}
+</script>
+<style>
+:root{
+  --bg:#141414; --panel:#1e1e1e; --line:#333; --text:#f1f1f1; --muted:#a9a9a9;
+  --green:#2f9e5b; --green-2:#37b569;
+  --head:"Barlow Condensed", "Arial Narrow", sans-serif;
+  --body:"Barlow", system-ui, sans-serif;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:90px}
+body{margin:0;color:var(--text);font:17px/1.6 var(--body);background:#111 url("../img/bakgrund.jpg") center top/cover fixed}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);font-weight:700;line-height:1.1;margin:0;letter-spacing:.01em}
+h2{font-size:clamp(32px,4vw,44px);text-align:center;margin-bottom:28px}
+.wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+section{padding:70px 0}
+.panel{background:rgba(20,20,20,.9);border:1px solid var(--line);border-radius:10px;padding:36px}
+
+.btn{display:inline-block;font:600 18px/1.2 var(--body);text-decoration:none;text-align:center;padding:16px 28px;border-radius:8px;background:var(--green);color:#fff;border:0;cursor:pointer}
+.btn:hover{background:var(--green-2)}
+.btn.dark{background:#2a2a2a}
+.btn.dark:hover{background:#3a3a3a}
+
+/* header */
+header{position:sticky;top:0;z-index:20;background:rgba(17,17,17,.97);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px;height:84px;max-width:1160px}
+header nav{display:flex;gap:30px}
+header nav a{text-decoration:none;font-weight:500;color:#cfcfcf}
+header nav a:hover{color:#fff}
+header .logo img{width:70px;height:70px}
+.hours-now{font-size:15px;color:var(--muted);white-space:nowrap}
+.hours-now b{color:#6fd396;font-weight:600}
+.hours-now.closed b{color:#ef6b5d}
+@media (max-width:860px){header nav{display:none}}
+
+/* start */
+.welcome{text-align:center;padding:60px 0 40px}
+.welcome img.big{width:180px;margin:0 auto 18px}
+.welcome h1{font-size:clamp(36px,5vw,54px)}
+.welcome p{color:var(--muted);font-size:19px;margin:10px auto 28px;max-width:44ch}
+.welcome .btn{font-size:20px;padding:18px 36px}
+.badge{display:inline-flex;align-items:center;gap:10px;margin-top:26px;padding:8px 16px;border:1px solid #4a4a4a;border-radius:99px;font-size:15px;color:#ddd;background:rgba(0,0,0,.4)}
+.badge b{color:#fff}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{display:block;text-decoration:none;background:var(--panel);border:1px solid var(--line);border-radius:10px;overflow:hidden;transition:transform .2s}
+.card:hover{transform:translateY(-3px)}
+.card img{width:100%;height:210px;object-fit:cover}
+.card span{display:block;padding:16px;text-align:center;font:700 22px/1 var(--head)}
+@media (max-width:760px){.cards{grid-template-columns:1fr}}
+
+/* meny */
+.menu-switch{display:flex;justify-content:center;gap:8px;margin-bottom:10px}
+.menu-switch button{font:600 16px var(--body);padding:10px 20px;border-radius:99px;border:1px solid #4a4a4a;background:transparent;color:#ddd;cursor:pointer}
+.menu-switch button[aria-pressed=true]{background:#fff;color:#111;border-color:#fff}
+.lunch-note{text-align:center;color:#6fd396;font-weight:600;min-height:1.6em;margin:0 0 6px}
+.cat{margin-top:30px}
+.cat h3{font-size:26px;border-bottom:2px solid var(--line);padding-bottom:8px}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.item{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 0;border-bottom:1px solid #2a2a2a}
+.item b{font-weight:700}
+.item .v{font-size:12px;font-weight:700;color:#6fd396;margin-left:8px}
+.item .pr{font-weight:700;white-space:nowrap;text-align:right}
+.item .pr small{display:block;font-size:12px;font-weight:500;color:var(--muted)}
+.item p{grid-column:1 / 3;margin:0;color:var(--muted);font-size:15px;line-height:1.5}
+body.lunch .item.no-lunch{opacity:.35}
+@media (max-width:760px){.items{grid-template-columns:1fr}.panel{padding:24px 18px}}
+
+/* om oss */
+.about{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center}
+.about img{border-radius:10px;width:100%;aspect-ratio:4/3;object-fit:cover}
+.about h2{text-align:left;margin-bottom:16px}
+.awards{list-style:none;margin:0;padding:0}
+.awards li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid #2a2a2a}
+.awards li b{font-weight:700}
+.awards li span{color:var(--muted);text-align:right}
+.awards li.top b,.awards li.top span{color:#fff}
+.about a.link{display:inline-block;margin-top:16px;color:#6fd396;font-weight:600}
+@media (max-width:760px){.about{grid-template-columns:1fr}}
+
+/* hitta oss */
+.find{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;align-items:start}
+.find h2{text-align:left;margin-bottom:14px}
+.find .addr{font-size:20px;font-weight:600;margin:0 0 20px}
+.hours{width:100%;border-collapse:collapse}
+.hours td{padding:7px 0;border-bottom:1px solid #2a2a2a}
+.hours td:last-child{text-align:right;font-weight:600}
+.hours tr.today td{color:#6fd396}
+.find iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:10px}
+@media (max-width:760px){.find{grid-template-columns:1fr}}
+
+/* kontakt */
+form{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:720px;margin:0 auto}
+form label{display:grid;gap:6px;font-weight:600;font-size:15px}
+form label.full{grid-column:1 / -1}
+form input,form select,form textarea{font:17px var(--body);color:var(--text);background:#111;border:1px solid #444;border-radius:8px;padding:12px 14px;width:100%}
+form textarea{min-height:140px;resize:vertical}
+form input:focus,form select:focus,form textarea:focus{outline:2px solid var(--green);border-color:var(--green)}
+form .req{color:#6fd396}
+form .btn{grid-column:1 / -1;justify-self:center}
+.contact-intro{text-align:center;color:var(--muted);max-width:52ch;margin:-12px auto 26px}
+.sent{grid-column:1 / -1;text-align:center;margin:0;padding:14px;border-radius:8px;background:rgba(47,158,91,.15);border:1px solid var(--green);display:none}
+.sent.show{display:block}
+@media (max-width:640px){form{grid-template-columns:1fr}}
+
+footer{background:#111;border-top:1px solid var(--line);padding:26px 0 100px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap}
+footer .social{display:flex;gap:18px}
+footer .social a{color:#ddd;font-weight:600;text-decoration:none}
+footer .social a:hover{color:#fff}
+@media (min-width:761px){footer{padding-bottom:26px}}
+
+.orderbar{display:none}
+@media (max-width:760px){
+  .orderbar{display:block;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30}
+  .orderbar .btn{display:block;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <nav>
+      <a href="#meny">Meny</a>
+      <a href="#om">Om oss</a>
+    </nav>
+    <a class="logo" href="#"><img src="../img/logo.png" alt="Knifetown Burgers"></a>
+    <nav>
+      <a href="#hitta">Hitta oss</a>
+      <a href="#kontakt">Kontakt</a>
+    </nav>
+    <span class="hours-now" id="status">Öppet 10–20</span>
+  </div>
+</header>
+
+<main>
+<section class="welcome">
+  <div class="wrap">
+    <h1>Välkommen till Knifetown Burgers</h1>
+    <p>Burgare på svenskt nötkött, på Kungsängsvägen 19B i Uppsala.</p>
+    <a class="btn" href="https://qopla.com/restaurant/knifetown-burgers-/qQALLpRyEO/order" target="_blank" rel="noopener">Hungrig? Beställ online här</a>
+    <div><span class="badge"><span><b>Plats 5</b> på Sveriges 100 bästa burgare 2024</span></span></div>
+  </div>
+</section>
+
+<section style="padding-top:10px">
+  <div class="wrap cards">
+    <a class="card" href="#meny"><img src="../img/burgare.jpg" alt="Burgare med cheddar"><span>Vår meny</span></a>
+    <a class="card" href="#om"><img src="../img/restaurang.jpg" alt="Matsalen" style="object-position:center 65%"><span>Om oss</span></a>
+    <a class="card" href="#hitta"><img src="../img/tater-tots.jpg" alt="Truffle tater tots"><span>Hitta till oss</span></a>
+  </div>
+</section>
+
+<section id="meny">
+  <div class="wrap panel">
+    <h2>Våra menyer</h2>
+    <div class="menu-switch" role="group" aria-label="Välj meny">
+      <button type="button" aria-pressed="true" data-mode="dag">Måndag–söndag</button>
+      <button type="button" aria-pressed="false" data-mode="lunch">Lunch 10–15</button>
+    </div>
+    <p class="lunch-note" id="lunch-note"></p>
+    <div class="cat">
+      <h3>Burgare</h3>
+      <div class="items">
+        <div class="item"><b>Månadens burgare <span class="v" style="color:#f2c94c">Oktober</span></b><span class="pr" data-dag="140 / 170 kr" data-lunch="170 / 200 kr">140 / 170 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, smörstekta trattkantareller, äpple, schalottenlök, cheddar, majonnäs med brynt smör/timjan/lagrad ost.</p></div>
+        <div class="item"><b>Oklahoma</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Union smashed svenskt nötkött 2xcheddar, senapsstekt, dillpicklad gurka, gul lök, majonnäs, friterad schalottenlök.</p></div>
+        <div class="item"><b>Starken</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, 2x cheddar, jalapenodressing, rödlök &amp; färsk jalapeno.</p></div>
+        <div class="item"><b>BBQ Special</b><span class="pr" data-dag="140 / 170 kr" data-lunch="170 / 200 kr">140 / 170 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, 2 x cheddarost, bacon, picklad rödlök, chipotlemajonnäs, blåbär och habanero BBQ sås.</p></div>
+        <div class="item"><b>Knifetown cheese</b><span class="pr" data-dag="69 kr" data-lunch="99 kr">69 kr</span><p>2x45 gr. svenskt nötkött, cheddarost, finhackad lök och finhackad gurka, senap, ketchup.</p></div>
+        <div class="item"><b>Bacon &amp; Cheese</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, cheddarost, bacon, Knifetown dressing, sallad, lök, tomat</p></div>
+        <div class="item"><b>Tryffelburgare</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, tryffel ost och cheddar ost, ruccolasallad, picklad rödlök &amp; tryffel-majonnäs.</p></div>
+        <div class="item"><b>Svensk Grillost</b><span class="pr" data-dag="125 / 155 kr" data-lunch="155 / 170 kr">125 / 155 kr<small>1 st / 2 st</small></span><p>Pankopanerad svensk grillost, vitlöks majonnäs och picklad paprika.</p></div>
+        <div class="item"><b>Vegansk Originalet <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, Vegansk ost, Vegansk Knifetown dressing, Gul lök, Dillpicklad gurka.</p></div>
+        <div class="item"><b>Vegansk Starken <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, Vegansk ost, Vegansk jalapeñodressing, Röd lök, Färska jalapeño</p></div>
+        <div class="item"><b>Vegansk Tryffel <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, Vegansk ost, Vegansk tryffeldressing, Ruccola, Picklad rödlök.</p></div>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Smått &amp; gott</h3>
+      <div class="items">
+        <div class="item"><b>Truffle tater tots</b><span class="pr">79 kr</span><p>Tater tots (potatis), Tryffel majonnäs, Grana Padano, Persilja</p></div>
+        <div class="item no-lunch"><b>Dirty fries</b><span class="pr">75 kr</span><p>Pommes, bacon, jalapeño, Knifetown dressing och cheddarsås</p></div>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Tillbehör</h3>
+      <div class="items">
+        <div class="item"><b>Pommes</b><span class="pr">40 kr</span></div>
+        <div class="item"><b>Garlic Fries</b><span class="pr">75 kr</span><p>Pommes, Grana Padano, limeaioli &amp; salladslök.</p></div>
+        <div class="item no-lunch"><b>Corn ribs (4 st)</b><span class="pr">49 kr</span><p>Smör, Grana Padano ost, och kryddor.</p></div>
+        <div class="item"><b>Extra kött</b><span class="pr">35 kr</span></div>
+        <div class="item"><b>Extra Ost</b><span class="pr">15 kr</span></div>
+        <div class="item"><b>Extra Jalapeno</b><span class="pr">15 kr</span></div>
+        <div class="item"><b>Dipp</b><span class="pr">20 kr</span><p>Aioli, Knifetown dressing, tryffel, chipotle eller honey mustard.</p></div>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Dryck</h3>
+      <div class="items">
+        <div class="item"><b>Läsk</b><span class="pr">29 kr</span><p>Coca-Cola, Coca-Cola Zero, Trocadero, Trocadero Zero, Sprite/7up eller Fanta Apelsin.</p></div>
+        <div class="item"><b>Festis</b><span class="pr">15 kr</span><p>Jordgubb, päron eller apelsin.</p></div>
+        <div class="item"><b>Milkshake</b><span class="pr">79 kr</span></div>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Meny &amp; barn</h3>
+      <div class="items">
+        <div class="item no-lunch"><b>Gör det till en meny</b><span class="pr">+50 kr</span><p>Lägg till pommes och dryck till din burgare</p></div>
+        <div class="item"><b>Kidsmeal</b><span class="pr">99 kr</span><p>(Burgare eller chicken nuggets), pommes &amp; en valfri festis.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="om">
+  <div class="wrap panel about">
+    <img src="../img/restaurang.jpg" alt="Matsalen hos Knifetown Burgers" loading="lazy">
+    <div>
+      <h2>Om oss</h2>
+      <ul class="awards">
+        <li class="top"><b>2024</b><span>Plats 5, Sveriges 100 bästa burgare · Årets eldsjälar</span></li>
+        <li><b>2023</b><span>Burger Dudes 5/5 · plats 5 i Sverige</span></li>
+        <li><b>2022</b><span>Burger Dudes 5/5 · plats 9 i Sverige</span></li>
+        <li><b>2021</b><span>Burger Dudes 5/5 · plats 10 i Sverige</span></li>
+        <li><b>2020</b><span>Burger Dudes 5/5 · plats 12 i Sverige</span></li>
+      </ul>
+      <a class="link" href="https://www.burgerdudes.se/sweden/knivsta/knifetown-burgers/" target="_blank" rel="noopener">Läs vår recension hos Burger Dudes →</a>
+    </div>
+  </div>
+</section>
+
+<section id="hitta">
+  <div class="wrap panel find">
+    <div>
+      <h2>Hitta oss</h2>
+      <p class="addr">Kungsängsvägen 19B<br>753 23 Uppsala</p>
+      <table class="hours">
+        <tr data-d="1"><td>Måndag</td><td>10:00–20:00</td></tr>
+        <tr data-d="2"><td>Tisdag</td><td>10:00–20:00</td></tr>
+        <tr data-d="3"><td>Onsdag</td><td>10:00–20:00</td></tr>
+        <tr data-d="4"><td>Torsdag</td><td>10:00–20:00</td></tr>
+        <tr data-d="5"><td>Fredag</td><td>10:00–21:00</td></tr>
+        <tr data-d="6"><td>Lördag</td><td>10:00–21:00</td></tr>
+        <tr data-d="0"><td>Söndag</td><td>10:00–20:00</td></tr>
+      </table>
+    </div>
+    <iframe title="Karta till Knifetown Burgers" loading="lazy" src="https://www.google.com/maps?q=Kungs%C3%A4ngsv%C3%A4gen+19B,+753+23+Uppsala&output=embed"></iframe>
+  </div>
+</section>
+
+<section id="kontakt">
+  <div class="wrap panel">
+    <h2>Kontakt</h2>
+    <p class="contact-intro">Skriv ditt meddelande så hör vi av oss så snart vi kan. Beställningar görs via knappen Beställ online, inte här.</p>
+    <form id="contact-form" novalidate>
+      <label class="full"><span>Typ av meddelande <span class="req">*</span></span>
+        <select name="typ" required>
+          <option>Vanlig fråga</option>
+          <option>Fel på hemsidan (inte beställningar via Qopla)</option>
+        </select>
+      </label>
+      <label><span>E-post <span class="req">*</span></span><input type="email" name="epost" required autocomplete="email"></label>
+      <label><span>Telefon</span><input type="tel" name="telefon" autocomplete="tel"></label>
+      <label class="full"><span>Meddelande <span class="req">*</span></span><textarea name="meddelande" required></textarea></label>
+      <button class="btn" type="submit">Skicka meddelande</button>
+      <p class="sent" id="sent" role="status"></p>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© Knifetown Burgers · Kungsängsvägen 19B, Uppsala</span>
+    <div class="social">
+      <a href="https://www.instagram.com/knifetownburgers/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=100063505151036" target="_blank" rel="noopener">Facebook</a>
+    </div>
+  </div>
+</footer>
+
+<div class="orderbar"><a class="btn" href="https://qopla.com/restaurant/knifetown-burgers-/qQALLpRyEO/order" target="_blank" rel="noopener">Beställ online</a></div>
+
+<script>
+// måndag–söndag / lunch
+const note = document.getElementById("lunch-note");
+document.querySelectorAll(".menu-switch button").forEach(b => b.addEventListener("click", () => {
+  const lunch = b.dataset.mode === "lunch";
+  document.querySelectorAll(".menu-switch button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  document.body.classList.toggle("lunch", lunch);
+  document.querySelectorAll(".pr[data-lunch]").forEach(p => { p.firstChild.textContent = lunch ? p.dataset.lunch : p.dataset.dag; });
+  note.textContent = lunch ? "Alla dagar 10–15. Pommes och dryck ingår till burgarna." : "";
+}));
+
+// kontaktformulär – demo, skickar inget
+const form = document.getElementById("contact-form"), sent = document.getElementById("sent");
+form.addEventListener("submit", e => {
+  e.preventDefault();
+  if (!form.checkValidity()) { form.reportValidity(); return; }
+  sent.textContent = "Tack! Det här är en demo, så meddelandet skickades inte någonstans.";
+  sent.classList.add("show");
+  form.reset();
+});
+
+// öppet nu
+(() => {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {timeZone:"Europe/Stockholm", weekday:"short", hour:"2-digit", minute:"2-digit", hourCycle:"h23"})
+    .formatToParts(new Date()).map(x => [x.type, x.value]));
+  const d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(p.weekday), m = +p.hour * 60 + +p.minute;
+  const close = d === 5 || d === 6 ? 21 : 20, el = document.getElementById("status");
+  document.querySelector(`.hours tr[data-d="${d}"]`)?.classList.add("today");
+  if (m >= 600 && m < close * 60) el.innerHTML = `<b>Öppet nu</b> · till ${close}:00`;
+  else { el.classList.add("closed"); el.innerHTML = `<b>Stängt</b> · öppnar 10:00`; }
+})();
+</script>
+</body>
+</html>
