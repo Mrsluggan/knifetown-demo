@@ -4,24 +4,84 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Knifetown Burgers – topp 10 i Sverige, i Uppsala</title>
+<title>Knifetown Burgers – smashburgare i Uppsala, topp 10 i Sverige</title>
 <meta name="description" content="Smashburgare på svenskt nötkött på Kungsängsvägen 19B i Uppsala. Plats 7 på Sveriges 100 bästa burgare 2026, topp 10 fem år i rad. Beställ online.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Knifetown Burgers">
+<meta property="og:locale" content="sv_SE">
+<meta property="og:title" content="Knifetown Burgers – smashburgare i Uppsala, topp 10 i Sverige">
+<meta property="og:description" content="Smashburgare på svenskt nötkött på Kungsängsvägen 19B i Uppsala. Plats 7 på Sveriges 100 bästa burgare 2026, topp 10 fem år i rad. Beställ online.">
+<meta property="og:url" content="https://knifetown.sluggan.com/modern/">
+<meta property="og:image" content="https://knifetown.sluggan.com/img/burgare.jpg">
+<meta property="og:image:alt" content="Smashburgare med cheddar från Knifetown Burgers">
+<meta name="twitter:card" content="summary_large_image">
 <link rel="icon" href="../img/favicon.png">
 <link rel="stylesheet" href="../fonts/fonts.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
+  "@id": "https://knifetownburgers.se/#restaurang",
   "name": "Knifetown Burgers",
-  "servesCuisine": "Hamburgare",
-  "priceRange": "69–200 kr",
+  "alternateName": "Knifetown Burgers Uppsala",
+  "description": "Smashburgare på svenskt nötkött i Uppsala. Startade som foodtruck i Knivsta 2020.",
+  "url": "https://knifetownburgers.se/",
+  "image": "https://knifetown.sluggan.com/img/burgare.jpg",
+  "logo": "https://knifetown.sluggan.com/img/logo.png",
   "telephone": "+46709465780",
-  "address": {"@type": "PostalAddress", "streetAddress": "Kungsängsvägen 19B", "postalCode": "753 23", "addressLocality": "Uppsala", "addressCountry": "SE"},
-  "openingHoursSpecification": [
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Sunday"], "opens": "10:00", "closes": "20:00"},
-    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "10:00", "closes": "21:00"}
+  "servesCuisine": [
+    "Hamburgare",
+    "Smashburgare"
   ],
-  "sameAs": ["https://www.instagram.com/knifetownburgers/", "https://www.facebook.com/profile.php?id=100063505151036"]
+  "priceRange": "69–200 kr",
+  "menu": "https://knifetownburgers.se/#meny",
+  "acceptsReservations": false,
+  "geo": {"@type": "GeoCoordinates", "latitude": 59.8467515, "longitude": 17.6700466},
+  "hasMap": "https://maps.google.com/?cid=10354588699820750538",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Kungsängsvägen 19B",
+    "postalCode": "753 23",
+    "addressLocality": "Uppsala",
+    "addressCountry": "SE"
+  },
+  "openingHoursSpecification": [
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Monday",
+        "Tuesday",
+        "Wednesday",
+        "Thursday",
+        "Sunday"
+      ],
+      "opens": "10:00",
+      "closes": "20:00"
+    },
+    {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": [
+        "Friday",
+        "Saturday"
+      ],
+      "opens": "10:00",
+      "closes": "21:00"
+    }
+  ],
+  "award": [
+    "Sveriges 100 bästa burgare 2026, plats 7",
+    "Sveriges 100 bästa burgare 2025, plats 10",
+    "Sveriges 100 bästa burgare 2024, plats 5"
+  ],
+  "potentialAction": {
+    "@type": "OrderAction",
+    "target": "https://qopla.com/restaurant/knifetown-burgers-/qQALLpRyEO/order"
+  },
+  "sameAs": [
+    "https://www.instagram.com/knifetownburgers/",
+    "https://www.facebook.com/profile.php?id=100063505151036",
+    "https://maps.google.com/?cid=10354588699820750538"
+  ]
 }
 </script>
 <style>
@@ -151,7 +211,9 @@ header .btn{padding:12px 18px;font-size:15px}
 .item .pr small{display:block;font:600 11px var(--body);color:var(--muted);letter-spacing:.06em}
 .item p{grid-column:1 / 3;margin:0;color:var(--muted);font-size:15px;line-height:1.5}
 .item.hidden-lunch{display:none}
-body.lunch .item.no-lunch{opacity:.35}
+body.lunch .item.no-lunch{opacity:.55}
+.item .v.nl{display:none;color:var(--red)}
+body.lunch .item .v.nl{display:inline}
 @media (max-width:760px){.items{grid-template-columns:1fr}}
 
 /* instagram */
@@ -172,6 +234,8 @@ body.lunch .item.no-lunch{opacity:.35}
 .hours tr.today td{color:var(--red)}
 .place .addr{font:400 26px/1.1 var(--head);text-transform:uppercase}
 .place .actions{display:flex;flex-wrap:wrap;gap:14px}
+.place .reviews{margin:-8px 0 26px;font-weight:600;font-size:17px}
+.place .reviews a{color:var(--red)}
 .place .btn.line{color:var(--black);border-color:var(--black)}
 .place .btn.line:hover{background:var(--black);color:var(--bone)}
 @media (max-width:860px){.place .wrap{grid-template-columns:1fr}}
@@ -310,7 +374,7 @@ footer .social a:hover{color:var(--accent)}
       <summary><h3>Smått &amp; gott <small>2 st</small></h3></summary>
       <div class="items">
         <div class="item"><b>Truffle tater tots</b><span class="pr">79 kr</span><p>Tater tots med tryffelmajonnäs, Grana Padano och persilja.</p></div>
-        <div class="item no-lunch"><b>Dirty fries</b><span class="pr">75 kr</span><p>Pommes med bacon, jalapeño, Knifetown dressing och cheddarsås.</p></div>
+        <div class="item no-lunch"><b>Dirty fries <span class="v nl">Ej lunch</span></b><span class="pr">75 kr</span><p>Pommes med bacon, jalapeño, Knifetown dressing och cheddarsås.</p></div>
       </div>
     </details>
     <details class="cat" open>
@@ -318,7 +382,7 @@ footer .social a:hover{color:var(--accent)}
       <div class="items">
         <div class="item"><b>Pommes</b><span class="pr">40 kr</span></div>
         <div class="item"><b>Garlic fries</b><span class="pr">75 kr</span><p>Pommes med Grana Padano, limeaioli och salladslök.</p></div>
-        <div class="item no-lunch"><b>Corn ribs (4 st)</b><span class="pr">49 kr</span><p>Med smör, Grana Padano och kryddor.</p></div>
+        <div class="item no-lunch"><b>Corn ribs (4 st) <span class="v nl">Ej lunch</span></b><span class="pr">49 kr</span><p>Med smör, Grana Padano och kryddor.</p></div>
         <div class="item"><b>Extra kött</b><span class="pr">35 kr</span></div>
         <div class="item"><b>Extra ost</b><span class="pr">15 kr</span></div>
         <div class="item"><b>Extra jalapeño</b><span class="pr">15 kr</span></div>
@@ -336,11 +400,11 @@ footer .social a:hover{color:var(--accent)}
     <details class="cat" open>
       <summary><h3>Meny &amp; barn <small>2 st</small></h3></summary>
       <div class="items">
-        <div class="item no-lunch"><b>Gör det till en meny</b><span class="pr">+50 kr</span><p>Lägg till pommes och dryck till din burgare.</p></div>
+        <div class="item no-lunch"><b>Gör det till en meny <span class="v nl">Ej lunch</span></b><span class="pr">+50 kr</span><p>Lägg till pommes och dryck till din burgare.</p></div>
         <div class="item"><b>Kidsmeal</b><span class="pr">99 kr</span><p>Burgare eller chicken nuggets, pommes och valfri Festis.</p></div>
       </div>
     </details>
-    <p class="allergy">Allergier eller specialkost? Säg till när du beställer, så berättar vi vad som går att anpassa.</p>
+    <p class="allergy"><b>Vi har glutenfritt bröd</b>, fråga bara när du beställer. Allergier eller annan specialkost? Säg till, så berättar vi vad som går att anpassa.</p>
   </div>
 </section>
 
@@ -389,8 +453,9 @@ footer .social a:hover{color:var(--accent)}
         <tr data-d="6"><td>Lördag</td><td>10–21</td></tr>
         <tr data-d="0"><td>Söndag</td><td>10–20</td></tr>
       </table>
+      <p class="reviews"><a href="https://maps.google.com/?cid=10354588699820750538" target="_blank" rel="noopener">★ Omdömen på Google</a> · <a href="https://search.google.com/local/writereview?placeid=ChIJpVhw3bm5X0YRyvYWwI_jso8" target="_blank" rel="noopener">Skriv en recension</a></p>
       <div class="actions">
-        <a class="btn line" href="https://maps.google.com/?q=Kungs%C3%A4ngsv%C3%A4gen%2019B,%20753%2023%20Uppsala" target="_blank" rel="noopener"><span>Vägbeskrivning</span></a>
+        <a class="btn line" href="https://www.google.com/maps/dir/?api=1&amp;destination=Knifetown+Burgers+Uppsala&amp;destination_place_id=ChIJpVhw3bm5X0YRyvYWwI_jso8" target="_blank" rel="noopener"><span>Vägbeskrivning</span></a>
         <a class="btn line" href="tel:+46709465780"><span>Ring 070-946 57 80</span></a>
       </div>
     </div>
@@ -430,6 +495,7 @@ footer .social a:hover{color:var(--accent)}
     <div class="social">
       <a href="https://www.instagram.com/knifetownburgers/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.facebook.com/profile.php?id=100063505151036" target="_blank" rel="noopener">Facebook</a>
+      <a href="https://maps.google.com/?cid=10354588699820750538" target="_blank" rel="noopener">Google</a>
     </div>
     <span>© Knifetown Burgers · Kungsängsvägen 19B, Uppsala · <a href="tel:+46709465780">070-946 57 80</a></span>
   </div>
@@ -480,7 +546,7 @@ if (matchMedia("(max-width:760px)").matches)
 
 // kartan laddas först vid klick (ingen Google-spårning innan dess)
 document.querySelector(".map-load").addEventListener("click", () => {
-  document.getElementById("map").innerHTML = '<iframe title="Karta till Knifetown Burgers" src="https://www.google.com/maps?q=Kungs%C3%A4ngsv%C3%A4gen+19B,+753+23+Uppsala&output=embed"></iframe>';
+  document.getElementById("map").innerHTML = '<iframe title="Karta till Knifetown Burgers" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1691.407983902509!2d17.785137976135005!3d59.7255966634627!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x465fb9b9dd7058a5%3A0x8fb2e38fc016f6ca!2sKnifetown%20Burgers!5e0!3m2!1ssv!2sse!4v1653653397197!5m2!1ssv!2sse"></iframe>';
 });
 </script>
 <script async src="https://www.instagram.com/embed.js"></script>
