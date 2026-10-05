@@ -103,6 +103,12 @@ body.lunch .item.no-lunch{opacity:.35}
 .about a.link{display:inline-block;margin-top:16px;color:#6fd396;font-weight:600}
 @media (max-width:760px){.about{grid-template-columns:1fr}}
 
+/* instagram */
+.feed{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding-bottom:12px;scrollbar-color:#444 transparent}
+.feed .instagram-media,.feed iframe{flex:0 0 326px!important;min-width:326px!important;max-width:326px!important;margin:0!important;scroll-snap-align:start}
+.feed blockquote{background:#1e1e1e;border:1px solid #333;border-radius:8px;padding:20px}
+.insta-link{display:block;text-align:center;margin-top:18px;color:#6fd396;font-weight:600}
+
 /* hitta oss */
 .find{display:grid;grid-template-columns:1fr 1.3fr;gap:30px;align-items:start}
 .find h2{text-align:left;margin-bottom:14px}
@@ -188,7 +194,7 @@ footer .social a:hover{color:#fff}
     <div class="cat">
       <h3>Burgare</h3>
       <div class="items">
-        <div class="item"><b>Månadens burgare <span class="v" style="color:#f2c94c">Oktober</span></b><span class="pr" data-dag="140 / 170 kr" data-lunch="170 / 200 kr">140 / 170 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, smörstekta trattkantareller, äpple, schalottenlök, cheddar, majonnäs med brynt smör/timjan/lagrad ost.</p></div>
+        <div class="item"><b>Månadens burgare <span class="v" style="color:#6fd396">Oktober</span></b><span class="pr" data-dag="140 / 170 kr" data-lunch="170 / 200 kr">140 / 170 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, smörstekta trattkantareller, äpple, schalottenlök, cheddar, majonnäs med brynt smör/timjan/lagrad ost.</p></div>
         <div class="item"><b>Oklahoma</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Union smashed svenskt nötkött 2xcheddar, senapsstekt, dillpicklad gurka, gul lök, majonnäs, friterad schalottenlök.</p></div>
         <div class="item"><b>Starken</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, 2x cheddar, jalapenodressing, rödlök &amp; färsk jalapeno.</p></div>
         <div class="item"><b>BBQ Special</b><span class="pr" data-dag="140 / 170 kr" data-lunch="170 / 200 kr">140 / 170 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, 2 x cheddarost, bacon, picklad rödlök, chipotlemajonnäs, blåbär och habanero BBQ sås.</p></div>
@@ -252,6 +258,20 @@ footer .social a:hover{color:#fff}
       </ul>
       <a class="link" href="https://www.burgerdudes.se/sweden/knivsta/knifetown-burgers/" target="_blank" rel="noopener">Läs vår recension hos Burger Dudes →</a>
     </div>
+  </div>
+</section>
+
+<section id="instagram">
+  <div class="wrap panel">
+    <h2>Senast på Instagram</h2>
+    <div class="feed">
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dd6La5-oDU0/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dd6La5-oDU0/" target="_blank" rel="noopener">Visa inlägget på Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DdtggC8oblx/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DdtggC8oblx/" target="_blank" rel="noopener">Visa inlägget på Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Ddq5Xziocdc/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Ddq5Xziocdc/" target="_blank" rel="noopener">Visa inlägget på Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DdI-T4IoI4z/" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DdI-T4IoI4z/" target="_blank" rel="noopener">Visa inlägget på Instagram</a></blockquote>
+      <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dc-vcPUI2Wy/" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dc-vcPUI2Wy/" target="_blank" rel="noopener">Visa inlägget på Instagram</a></blockquote>
+    </div>
+    <a class="insta-link" href="https://www.instagram.com/knifetownburgers/" target="_blank" rel="noopener">Följ oss på Instagram @knifetownburgers →</a>
   </div>
 </section>
 
@@ -339,5 +359,6 @@ form.addEventListener("submit", e => {
   else { el.classList.add("closed"); el.innerHTML = `<b>Stängt</b> · öppnar 10:00`; }
 })();
 </script>
+<script async src="https://www.instagram.com/embed.js"></script>
 </body>
 </html>
