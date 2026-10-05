@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Knifetown Burgers – topp 5 i Sverige, i Uppsala</title>
+<meta name="description" content="Smashburgare på svenskt nötkött på Kungsängsvägen 19B i Uppsala. Plats 5 på Sveriges 100 bästa burgare 2024. Beställ online.">
+<link rel="icon" href="img/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bowlby+One&family=Archivo:wght@400;600;800&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Knifetown Burgers",
+  "servesCuisine": "Hamburgare",
+  "priceRange": "69–200 kr",
+  "address": {"@type": "PostalAddress", "streetAddress": "Kungsängsvägen 19B", "postalCode": "753 23", "addressLocality": "Uppsala", "addressCountry": "SE"},
+  "openingHoursSpecification": [
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Sunday"], "opens": "10:00", "closes": "20:00"},
+    {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Friday","Saturday"], "opens": "10:00", "closes": "21:00"}
+  ],
+  "sameAs": ["https://www.instagram.com/knifetownburgers/", "https://www.facebook.com/profile.php?id=100063505151036"]
+}
+</script>
+<style>
+:root{
+  --black:#0d0d0d; --ink:#171615; --bone:#f2ede4; --muted:#a8a197;
+  --cheddar:#ffc21a; --red:#e2371b;
+  --head:"Bowlby One", Impact, sans-serif;
+  --body:"Archivo", system-ui, sans-serif;
+  --cut:4vw;
+}
+*{box-sizing:border-box}
+html{scroll-padding-top:76px}
+body{margin:0;background:var(--black);color:var(--bone);font:17px/1.6 var(--body);overflow-x:clip}
+img{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);font-weight:400;line-height:.95;margin:0;text-transform:uppercase}
+h2{font-size:clamp(40px,6.5vw,80px)}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+section{padding:100px 0;position:relative}
+
+.btn{display:inline-block;font:400 18px/1 var(--head);text-transform:uppercase;text-decoration:none;padding:17px 26px;background:var(--cheddar);color:var(--black);border:3px solid var(--cheddar);transform:skew(-8deg)}
+.btn > span{display:inline-block;transform:skew(8deg)}
+.btn:hover{background:var(--bone);border-color:var(--bone)}
+.btn.line{background:transparent;color:var(--bone);border-color:var(--bone)}
+.btn.line:hover{background:var(--bone);color:var(--black)}
+
+/* knivskurna kanter */
+.cut-top{clip-path:polygon(0 var(--cut),100% 0,100% 100%,0 100%);margin-top:calc(var(--cut) * -1);padding-top:calc(100px + var(--cut))}
+.cut-both{clip-path:polygon(0 var(--cut),100% 0,100% calc(100% - var(--cut)),0 100%);margin:calc(var(--cut) * -1) 0;padding:calc(100px + var(--cut)) 0}
+
+/* header */
+header{position:sticky;top:0;z-index:30;background:rgba(13,13,13,.94);border-bottom:1px solid #2a2826}
+header .wrap{display:flex;align-items:center;gap:28px;height:76px}
+header .logo img{width:62px;height:62px}
+header nav{display:flex;gap:26px;margin-left:auto}
+header nav a{text-decoration:none;font-weight:600;text-transform:uppercase;letter-spacing:.06em;font-size:14px}
+header nav a:hover{color:var(--cheddar)}
+.status{font-size:14px;color:var(--muted);white-space:nowrap}
+.status b{color:#7ee08a;font-weight:600}
+.status.closed b{color:var(--red)}
+header .btn{padding:12px 18px;font-size:15px}
+@media (max-width:900px){header nav{display:none}.status{margin-left:auto}}
+@media (max-width:480px){.status{display:none}header .btn{margin-left:auto}}
+
+/* hero */
+.hero{padding:70px 0 120px;overflow:hidden;background:var(--black) url("img/bakgrund.jpg") center/cover}
+.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center}
+.hero h1{font-size:clamp(56px,7.6vw,108px)}
+.hero h1 span{display:block;color:var(--cheddar);white-space:nowrap}
+.hero p{font-size:20px;max-width:34ch;margin:24px 0 34px;color:#d9d3c9}
+.hero .actions{display:flex;flex-wrap:wrap;gap:16px}
+.burger{position:relative}
+.burger img{width:100%;aspect-ratio:4/5;object-fit:cover;clip-path:polygon(12% 0,100% 0,88% 100%,0 100%)}
+.stamp{position:absolute;left:-20px;bottom:30px;width:170px;height:170px;border-radius:50%;background:var(--red);color:var(--bone);display:grid;place-items:center;text-align:center;transform:rotate(-12deg);box-shadow:0 10px 30px rgba(0,0,0,.5);padding:18px}
+.stamp b{display:block;font:400 54px/.9 var(--head)}
+.stamp small{display:block;font-weight:800;font-size:11px;letter-spacing:.06em;text-transform:uppercase;line-height:1.25;margin-top:6px}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}.burger{max-width:460px;margin:20px auto 0}.stamp{left:-6px;width:140px;height:140px}.stamp b{font-size:44px}}
+
+/* månadens */
+.month{background:var(--cheddar);color:var(--black)}
+.month .wrap{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:22px 48px;align-items:end}
+.month .wrap > div:first-child{grid-column:1 / -1}
+.month .tag{font:400 22px/1 var(--head);text-transform:uppercase;background:var(--black);color:var(--cheddar);padding:10px 14px;display:inline-block;transform:rotate(-3deg)}
+.month h2{font-size:clamp(56px,10vw,140px);margin-top:14px}
+.month p{font-size:20px;font-weight:600;max-width:46ch;margin:0}
+.month .price{font:400 46px/1 var(--head);text-align:right;white-space:nowrap}
+.month .price small{display:block;font:600 14px var(--body);margin-top:6px}
+@media (max-width:860px){.month .wrap{grid-template-columns:1fr;gap:20px}.month .price{text-align:left}}
+
+/* utmärkelser */
+.awards{background:var(--ink)}
+.awards .intro{display:flex;justify-content:space-between;gap:30px;flex-wrap:wrap;align-items:end}
+.quote{font:400 clamp(26px,3.4vw,40px)/1.05 var(--head);color:var(--cheddar);max-width:16ch;text-transform:uppercase}
+.quote small{display:block;font:600 14px var(--body);color:var(--muted);text-transform:none;margin-top:10px}
+.timeline{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:50px}
+.year{border:2px solid #34312d;padding:24px 18px 20px;position:relative}
+.year .y{font-weight:800;color:var(--muted);letter-spacing:.08em}
+.year .p{font:400 64px/1 var(--head);margin:10px 0 8px}
+.year .p sup{font-size:.4em;vertical-align:top;margin-right:2px}
+.year span{font-size:14px;color:var(--muted);line-height:1.4;display:block}
+.year.best{border-color:var(--cheddar);background:var(--cheddar);color:var(--black)}
+.year.best .y,.year.best span{color:var(--black)}
+.year.best .extra{color:var(--cheddar)}
+.year .extra{display:inline-block;margin-top:10px;background:var(--black);color:var(--cheddar);font-weight:800;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:5px 8px}
+.awards .more{display:inline-block;margin-top:30px;font-weight:600;color:var(--cheddar)}
+@media (max-width:900px){.timeline{grid-template-columns:repeat(2,1fr)}.year.best{grid-column:1 / -1}}
+
+/* meny */
+.menu-head{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap}
+.switch{display:inline-flex;border:3px solid var(--bone)}
+.switch button{font:400 16px/1 var(--head);text-transform:uppercase;padding:14px 18px;background:transparent;color:var(--bone);border:0;cursor:pointer}
+.switch button[aria-pressed=true]{background:var(--bone);color:var(--black)}
+.lunch-note{margin:18px 0 0;color:var(--cheddar);font-weight:600;min-height:1.6em}
+.cat{margin-top:56px}
+.cat h3{font-size:30px;color:var(--cheddar);display:flex;align-items:center;gap:16px}
+.cat h3::after{content:"";flex:1;height:3px;background:var(--cheddar);transform:skewY(-2deg)}
+.items{display:grid;grid-template-columns:1fr 1fr;gap:0 56px;margin-top:10px}
+.item{display:grid;grid-template-columns:1fr auto;gap:4px 18px;padding:18px 0;border-bottom:1px dashed #3a3632}
+.item b{font-weight:800;font-size:19px}
+.item .v{font-size:11px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;color:#7ee08a;margin-left:8px;vertical-align:2px}
+.item .pr{font:400 22px/1.2 var(--head);color:var(--cheddar);white-space:nowrap;text-align:right}
+.item .pr small{display:block;font:600 11px var(--body);color:var(--muted);letter-spacing:.06em}
+.item p{grid-column:1 / 3;margin:0;color:var(--muted);font-size:15px;line-height:1.5}
+.item.hidden-lunch{display:none}
+body.lunch .item.no-lunch{opacity:.35}
+@media (max-width:760px){.items{grid-template-columns:1fr}}
+
+/* platsen */
+.place{background:var(--bone);color:var(--black)}
+.place .wrap{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center}
+.place img{width:100%;aspect-ratio:4/5;object-fit:cover;clip-path:polygon(0 0,100% 6%,100% 100%,0 94%)}
+.place p{font-size:18px;max-width:44ch}
+.hours{width:100%;max-width:420px;border-collapse:collapse;margin:24px 0 28px;font-size:17px}
+.hours td{padding:9px 0;border-bottom:2px solid #d8d1c4}
+.hours td:last-child{text-align:right;font-weight:800}
+.hours tr.today td{color:var(--red)}
+.place .addr{font:400 26px/1.1 var(--head);text-transform:uppercase}
+.place .btn.line{color:var(--black);border-color:var(--black)}
+.place .btn.line:hover{background:var(--black);color:var(--bone)}
+@media (max-width:860px){.place .wrap{grid-template-columns:1fr}}
+
+.map iframe{width:100%;height:380px;border:0;display:block;filter:grayscale(1) contrast(1.1)}
+
+footer{padding:40px 0 110px;color:var(--muted);font-size:14px}
+footer .wrap{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+footer img{width:70px}
+footer .social{display:flex;gap:20px}
+footer .social a{font-weight:600;color:var(--bone);text-decoration:none}
+footer .social a:hover{color:var(--cheddar)}
+@media (min-width:761px){footer{padding-bottom:40px}}
+
+.orderbar{display:none}
+@media (max-width:760px){
+  .orderbar{display:block;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:40}
+  .orderbar .btn{display:block;text-align:center;font-size:20px;box-shadow:0 8px 24px rgba(0,0,0,.5)}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap">
+    <a class="logo" href="#"><img src="img/logo.png" alt="Knifetown Burgers"></a>
+    <nav>
+      <a href="#meny">Meny</a>
+      <a href="#utmarkelser">Utmärkelser</a>
+      <a href="#hitta">Hitta hit</a>
+    </nav>
+    <span class="status" id="status">Öppet 10–20</span>
+    <a class="btn" href="https://qopla.com/restaurant/knifetown-burgers-/qQALLpRyEO/order" target="_blank" rel="noopener"><span>Beställ</span></a>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap">
+    <div>
+      <h1>Topp 5<span>i Sverige.</span></h1>
+      <p>Smashburgare på svenskt nötkött, på Kungsängsvägen i Uppsala.</p>
+      <div class="actions">
+        <a class="btn" href="https://qopla.com/restaurant/knifetown-burgers-/qQALLpRyEO/order" target="_blank" rel="noopener"><span>Beställ online</span></a>
+        <a class="btn line" href="#meny"><span>Se menyn</span></a>
+      </div>
+    </div>
+    <div class="burger">
+      <img src="img/burgare.jpg" alt="Smashburgare med cheddar">
+      <div class="stamp"><div><b>#5</b><small>Sveriges 100 bästa burgare 2024</small></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="month cut-both">
+  <div class="wrap">
+    <div>
+      <span class="tag">Bara i oktober</span>
+      <h2>Månadens</h2>
+    </div>
+    <p>Svenskt nötkött, smörstekta trattkantareller, äpple, schalottenlök, cheddar och majonnäs med brynt smör, timjan och lagrad ost.</p>
+    <div class="price">140 / 170 kr<small>135 g / 200 g</small></div>
+  </div>
+</section>
+
+<section class="awards cut-top" id="utmarkelser">
+  <div class="wrap">
+    <div class="intro">
+      <h2>Bland Sveriges bästa,<br>år efter år</h2>
+      <div class="quote">"Sylvass burgarprecision"<small>Sveriges 100 bästa burgare 2024</small></div>
+    </div>
+    <div class="timeline">
+      <div class="year"><div class="y">2020</div><div class="p"><sup>#</sup>12</div><span>Burger Dudes, 5/5</span></div>
+      <div class="year"><div class="y">2021</div><div class="p"><sup>#</sup>10</div><span>Burger Dudes, 5/5</span></div>
+      <div class="year"><div class="y">2022</div><div class="p"><sup>#</sup>9</div><span>Burger Dudes, 5/5</span></div>
+      <div class="year"><div class="y">2023</div><div class="p"><sup>#</sup>5</div><span>Burger Dudes, 5/5</span></div>
+      <div class="year best"><div class="y">2024</div><div class="p"><sup>#</sup>5</div><span>Sveriges 100 bästa burgare</span><span class="extra">Årets eldsjälar</span></div>
+    </div>
+    <a class="more" href="https://www.burgerdudes.se/sweden/knivsta/knifetown-burgers/" target="_blank" rel="noopener">Läs recensionen hos Burger Dudes →</a>
+  </div>
+</section>
+
+<section id="meny">
+  <div class="wrap">
+    <div class="menu-head">
+      <h2>Meny</h2>
+      <div class="switch" role="group" aria-label="Välj meny">
+        <button type="button" aria-pressed="true" data-mode="dag">Hela dagen</button>
+        <button type="button" aria-pressed="false" data-mode="lunch">Lunch 10–15</button>
+      </div>
+    </div>
+    <p class="lunch-note" id="lunch-note"></p>
+    <div class="cat">
+      <h3>Burgare</h3>
+      <div class="items">
+        <div class="item"><b>Månadens burgare <span class="v" style="color:var(--cheddar)">Oktober</span></b><span class="pr" data-dag="140 / 170 kr" data-lunch="170 / 200 kr">140 / 170 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, smörstekta trattkantareller, äpple, schalottenlök, cheddar, majonnäs med brynt smör/timjan/lagrad ost.</p></div>
+        <div class="item"><b>Oklahoma</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Union smashed svenskt nötkött 2xcheddar, senapsstekt, dillpicklad gurka, gul lök, majonnäs, friterad schalottenlök.</p></div>
+        <div class="item"><b>Starken</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, 2x cheddar, jalapenodressing, rödlök &amp; färsk jalapeno.</p></div>
+        <div class="item"><b>BBQ Special</b><span class="pr" data-dag="140 / 170 kr" data-lunch="170 / 200 kr">140 / 170 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, 2 x cheddarost, bacon, picklad rödlök, chipotlemajonnäs, blåbär och habanero BBQ sås.</p></div>
+        <div class="item"><b>Knifetown cheese</b><span class="pr" data-dag="69 kr" data-lunch="99 kr">69 kr</span><p>2x45 gr. svenskt nötkött, cheddarost, finhackad lök och finhackad gurka, senap, ketchup.</p></div>
+        <div class="item"><b>Bacon &amp; Cheese</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, cheddarost, bacon, Knifetown dressing, sallad, lök, tomat</p></div>
+        <div class="item"><b>Tryffelburgare</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, tryffel ost och cheddar ost, ruccolasallad, picklad rödlök &amp; tryffel-majonnäs.</p></div>
+        <div class="item"><b>Svensk Grillost</b><span class="pr" data-dag="125 / 155 kr" data-lunch="155 / 170 kr">125 / 155 kr<small>1 st / 2 st</small></span><p>Pankopanerad svensk grillost, vitlöks majonnäs och picklad paprika.</p></div>
+        <div class="item"><b>Vegansk Originalet <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, Vegansk ost, Vegansk Knifetown dressing, Gul lök, Dillpicklad gurka.</p></div>
+        <div class="item"><b>Vegansk Starken <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, Vegansk ost, Vegansk jalapeñodressing, Röd lök, Färska jalapeño</p></div>
+        <div class="item"><b>Vegansk Tryffel <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, Vegansk ost, Vegansk tryffeldressing, Ruccola, Picklad rödlök.</p></div>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Smått &amp; gott</h3>
+      <div class="items">
+        <div class="item"><b>Truffle tater tots</b><span class="pr">79 kr</span><p>Tater tots (potatis), Tryffel majonnäs, Grana Padano, Persilja</p></div>
+        <div class="item no-lunch"><b>Dirty fries</b><span class="pr">75 kr</span><p>Pommes, bacon, jalapeño, Knifetown dressing och cheddarsås</p></div>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Tillbehör</h3>
+      <div class="items">
+        <div class="item"><b>Pommes</b><span class="pr">40 kr</span></div>
+        <div class="item"><b>Garlic Fries</b><span class="pr">75 kr</span><p>Pommes, Grana Padano, limeaioli &amp; salladslök.</p></div>
+        <div class="item no-lunch"><b>Corn ribs (4 st)</b><span class="pr">49 kr</span><p>Smör, Grana Padano ost, och kryddor.</p></div>
+        <div class="item"><b>Extra kött</b><span class="pr">35 kr</span></div>
+        <div class="item"><b>Extra Ost</b><span class="pr">15 kr</span></div>
+        <div class="item"><b>Extra Jalapeno</b><span class="pr">15 kr</span></div>
+        <div class="item"><b>Dipp</b><span class="pr">20 kr</span><p>Aioli, Knifetown dressing, tryffel, chipotle eller honey mustard.</p></div>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Dryck</h3>
+      <div class="items">
+        <div class="item"><b>Läsk</b><span class="pr">29 kr</span><p>Coca-Cola, Coca-Cola Zero, Trocadero, Trocadero Zero, Sprite/7up eller Fanta Apelsin.</p></div>
+        <div class="item"><b>Festis</b><span class="pr">15 kr</span><p>Jordgubb, päron eller apelsin.</p></div>
+        <div class="item"><b>Milkshake</b><span class="pr">79 kr</span></div>
+      </div>
+    </div>
+    <div class="cat">
+      <h3>Meny &amp; barn</h3>
+      <div class="items">
+        <div class="item no-lunch"><b>Gör det till en meny</b><span class="pr">+50 kr</span><p>Lägg till pommes och dryck till din burgare</p></div>
+        <div class="item"><b>Kidsmeal</b><span class="pr">99 kr</span><p>(Burgare eller chicken nuggets), pommes &amp; en valfri festis.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="place cut-top" id="hitta">
+  <div class="wrap">
+    <div>
+      <h2>Hitta hit</h2>
+      <p class="addr" style="margin-top:20px">Kungsängsvägen 19B<br>753 23 Uppsala</p>
+      <table class="hours" id="hours">
+        <tr data-d="1"><td>Måndag</td><td>10–20</td></tr>
+        <tr data-d="2"><td>Tisdag</td><td>10–20</td></tr>
+        <tr data-d="3"><td>Onsdag</td><td>10–20</td></tr>
+        <tr data-d="4"><td>Torsdag</td><td>10–20</td></tr>
+        <tr data-d="5"><td>Fredag</td><td>10–21</td></tr>
+        <tr data-d="6"><td>Lördag</td><td>10–21</td></tr>
+        <tr data-d="0"><td>Söndag</td><td>10–20</td></tr>
+      </table>
+      <a class="btn line" href="https://maps.google.com/?q=Kungs%C3%A4ngsv%C3%A4gen%2019B,%20753%2023%20Uppsala" target="_blank" rel="noopener"><span>Vägbeskrivning</span></a>
+    </div>
+    <img src="img/restaurang.jpg" alt="Matsalen hos Knifetown Burgers" loading="lazy">
+  </div>
+</section>
+
+<div class="map"><iframe title="Karta till Knifetown Burgers" loading="lazy" src="https://www.google.com/maps?q=Kungs%C3%A4ngsv%C3%A4gen+19B,+753+23+Uppsala&output=embed"></iframe></div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo.png" alt="Knifetown Burgers">
+    <div class="social">
+      <a href="https://www.instagram.com/knifetownburgers/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/profile.php?id=100063505151036" target="_blank" rel="noopener">Facebook</a>
+    </div>
+    <span>© Knifetown Burgers · Kungsängsvägen 19B, Uppsala</span>
+  </div>
+</footer>
+
+<div class="orderbar"><a class="btn" href="https://qopla.com/restaurant/knifetown-burgers-/qQALLpRyEO/order" target="_blank" rel="noopener"><span>Beställ online</span></a></div>
+
+<script>
+// hela dagen / lunch
+const note = document.getElementById("lunch-note");
+document.querySelectorAll(".switch button").forEach(b => b.addEventListener("click", () => {
+  const lunch = b.dataset.mode === "lunch";
+  document.querySelectorAll(".switch button").forEach(x => x.setAttribute("aria-pressed", x === b));
+  document.body.classList.toggle("lunch", lunch);
+  document.querySelectorAll(".pr[data-lunch]").forEach(p => {
+    p.firstChild.textContent = lunch ? p.dataset.lunch : p.dataset.dag;
+  });
+  note.textContent = lunch ? "Alla dagar 10–15. Pommes och dryck ingår till burgarna." : "";
+}));
+
+// öppet nu
+(() => {
+  const p = Object.fromEntries(new Intl.DateTimeFormat("en-GB", {timeZone:"Europe/Stockholm", weekday:"short", hour:"2-digit", minute:"2-digit", hourCycle:"h23"})
+    .formatToParts(new Date()).map(x => [x.type, x.value]));
+  const d = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"].indexOf(p.weekday), m = +p.hour * 60 + +p.minute;
+  const close = d === 5 || d === 6 ? 21 : 20, el = document.getElementById("status");
+  document.querySelector(`#hours tr[data-d="${d}"]`)?.classList.add("today");
+  if (m >= 600 && m < close * 60) el.innerHTML = `<b>Öppet nu</b> · till ${close}`;
+  else { el.classList.add("closed"); el.innerHTML = `<b>Stängt</b> · öppnar 10`; }
+})();
+</script>
+</body>
+</html>
