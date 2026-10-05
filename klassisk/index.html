@@ -5,17 +5,16 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
 <title>Knifetown Burgers – Uppsala</title>
-<meta name="description" content="Burgare på svenskt nötkött på Kungsängsvägen 19B i Uppsala. Plats 5 på Sveriges 100 bästa burgare 2024. Beställ online.">
+<meta name="description" content="Burgare på svenskt nötkött på Kungsängsvägen 19B i Uppsala. Plats 7 på Sveriges 100 bästa burgare 2026, topp 10 fem år i rad. Beställ online.">
 <link rel="icon" href="../img/favicon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../fonts/fonts.css">
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
   "@type": "Restaurant",
   "name": "Knifetown Burgers",
   "servesCuisine": "Hamburgare",
+  "telephone": "+46709465780",
   "address": {"@type": "PostalAddress", "streetAddress": "Kungsängsvägen 19B", "postalCode": "753 23", "addressLocality": "Uppsala", "addressCountry": "SE"},
   "openingHoursSpecification": [
     {"@type": "OpeningHoursSpecification", "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Sunday"], "opens": "10:00", "closes": "20:00"},
@@ -80,7 +79,13 @@ header .logo img{width:70px;height:70px}
 .menu-switch button[aria-pressed=true]{background:#fff;color:#111;border-color:#fff}
 .lunch-note{text-align:center;color:#6fd396;font-weight:600;min-height:1.6em;margin:0 0 6px}
 .cat{margin-top:30px}
-.cat h3{font-size:26px;border-bottom:2px solid var(--line);padding-bottom:8px}
+.cat summary{display:flex;align-items:center;gap:12px;cursor:pointer;list-style:none;border-bottom:2px solid var(--line);padding-bottom:8px}
+.cat summary::-webkit-details-marker{display:none}
+.cat summary::after{content:"–";font:700 26px/1 var(--head);color:var(--muted);width:20px;text-align:center}
+.cat:not([open]) summary::after{content:"+"}
+.cat h3{flex:1;font-size:26px}
+.cat h3 small{font:500 14px var(--body);color:var(--muted)}
+.allergy{text-align:center;color:var(--muted);font-size:15px;margin:30px 0 0}
 .items{display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
 .item{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 0;border-bottom:1px solid #2a2a2a}
 .item b{font-weight:700}
@@ -101,6 +106,8 @@ body.lunch .item.no-lunch{opacity:.35}
 .awards li span{color:var(--muted);text-align:right}
 .awards li.top b,.awards li.top span{color:#fff}
 .about a.link{display:inline-block;margin-top:16px;color:#6fd396;font-weight:600}
+.about p{color:#d6d6d6;margin:0 0 14px}
+.about h3{font-size:22px;margin:22px 0 4px}
 @media (max-width:760px){.about{grid-template-columns:1fr}}
 
 /* instagram */
@@ -117,7 +124,11 @@ body.lunch .item.no-lunch{opacity:.35}
 .hours td{padding:7px 0;border-bottom:1px solid #2a2a2a}
 .hours td:last-child{text-align:right;font-weight:600}
 .hours tr.today td{color:#6fd396}
-.find iframe{width:100%;height:100%;min-height:340px;border:0;border-radius:10px}
+.find .tel{display:inline-block;margin:20px 0 0;font-size:20px;font-weight:600;color:#6fd396}
+.map{min-height:340px;height:100%;border-radius:10px;overflow:hidden;background:#111 url("../img/bakgrund.jpg") center/cover}
+.map iframe{width:100%;height:100%;min-height:340px;border:0;display:block}
+.map-load{width:100%;height:100%;min-height:340px;display:grid;place-content:center;justify-items:center;gap:12px;background:rgba(17,17,17,.55);border:0;color:var(--text);cursor:pointer;font:inherit}
+.map-load small{color:var(--muted);font-size:14px}
 @media (max-width:760px){.find{grid-template-columns:1fr}}
 
 /* kontakt */
@@ -143,8 +154,9 @@ footer .social a:hover{color:#fff}
 
 .orderbar{display:none}
 @media (max-width:760px){
-  .orderbar{display:block;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30}
-  .orderbar .btn{display:block;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+  .orderbar{display:flex;gap:10px;position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:30}
+  .orderbar .btn{flex:1;box-shadow:0 6px 20px rgba(0,0,0,.5)}
+  .orderbar .btn.dark{flex:0 0 auto}
 }
 </style>
 </head>
@@ -171,7 +183,8 @@ footer .social a:hover{color:#fff}
     <h1>Välkommen till Knifetown Burgers</h1>
     <p>Burgare på svenskt nötkött, på Kungsängsvägen 19B i Uppsala.</p>
     <a class="btn" href="https://qopla.com/restaurant/knifetown-burgers-/qQALLpRyEO/order" target="_blank" rel="noopener">Hungrig? Beställ online här</a>
-    <div><span class="badge"><span><b>Plats 5</b> på Sveriges 100 bästa burgare 2024</span></span></div>
+    <p style="font-size:15px;margin:14px auto 0">Beställ i förväg och hämta utan kö.</p>
+    <div><span class="badge"><span><b>Topp 10 i Sverige</b> fem år i rad · plats 7 på Sveriges 100 bästa burgare 2026</span></span></div>
   </div>
 </section>
 
@@ -191,56 +204,57 @@ footer .social a:hover{color:#fff}
       <button type="button" aria-pressed="false" data-mode="lunch">Lunch 10–15</button>
     </div>
     <p class="lunch-note" id="lunch-note"></p>
-    <div class="cat">
-      <h3>Burgare</h3>
+    <details class="cat" open>
+      <summary><h3>Burgare <small>11 st</small></h3></summary>
       <div class="items">
-        <div class="item"><b>Månadens burgare <span class="v" style="color:#6fd396">Oktober</span></b><span class="pr" data-dag="140 / 170 kr" data-lunch="170 / 200 kr">140 / 170 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, smörstekta trattkantareller, äpple, schalottenlök, cheddar, majonnäs med brynt smör/timjan/lagrad ost.</p></div>
-        <div class="item"><b>Oklahoma</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Union smashed svenskt nötkött 2xcheddar, senapsstekt, dillpicklad gurka, gul lök, majonnäs, friterad schalottenlök.</p></div>
-        <div class="item"><b>Starken</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, 2x cheddar, jalapenodressing, rödlök &amp; färsk jalapeno.</p></div>
-        <div class="item"><b>BBQ Special</b><span class="pr" data-dag="140 / 170 kr" data-lunch="170 / 200 kr">140 / 170 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, 2 x cheddarost, bacon, picklad rödlök, chipotlemajonnäs, blåbär och habanero BBQ sås.</p></div>
-        <div class="item"><b>Knifetown cheese</b><span class="pr" data-dag="69 kr" data-lunch="99 kr">69 kr</span><p>2x45 gr. svenskt nötkött, cheddarost, finhackad lök och finhackad gurka, senap, ketchup.</p></div>
-        <div class="item"><b>Bacon &amp; Cheese</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, cheddarost, bacon, Knifetown dressing, sallad, lök, tomat</p></div>
-        <div class="item"><b>Tryffelburgare</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, tryffel ost och cheddar ost, ruccolasallad, picklad rödlök &amp; tryffel-majonnäs.</p></div>
-        <div class="item"><b>Svensk Grillost</b><span class="pr" data-dag="125 / 155 kr" data-lunch="155 / 170 kr">125 / 155 kr<small>1 st / 2 st</small></span><p>Pankopanerad svensk grillost, vitlöks majonnäs och picklad paprika.</p></div>
-        <div class="item"><b>Vegansk Originalet <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, Vegansk ost, Vegansk Knifetown dressing, Gul lök, Dillpicklad gurka.</p></div>
-        <div class="item"><b>Vegansk Starken <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, Vegansk ost, Vegansk jalapeñodressing, Röd lök, Färska jalapeño</p></div>
-        <div class="item"><b>Vegansk Tryffel <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, Vegansk ost, Vegansk tryffeldressing, Ruccola, Picklad rödlök.</p></div>
+        <div class="item"><b>Månadens burgare <span class="v" style="color:#6fd396">Oktober</span></b><span class="pr" data-dag="140 / 170 kr" data-lunch="170 / 200 kr">140 / 170 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, smörstekta trattkantareller, äpple, schalottenlök, cheddar och majonnäs med brynt smör, timjan och lagrad ost.</p></div>
+        <div class="item"><b>Oklahoma</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött smashat med lök, dubbel cheddar, senapsstekt, dillpicklad gurka, gul lök, majonnäs och friterad schalottenlök.</p></div>
+        <div class="item"><b>Starken</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, dubbel cheddar, jalapeñodressing, rödlök och färsk jalapeño.</p></div>
+        <div class="item"><b>BBQ Special</b><span class="pr" data-dag="140 / 170 kr" data-lunch="170 / 200 kr">140 / 170 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, dubbel cheddar, bacon, picklad rödlök, chipotlemajonnäs och BBQ-sås med blåbär och habanero.</p></div>
+        <div class="item"><b>Knifetown cheese</b><span class="pr" data-dag="69 kr" data-lunch="99 kr">69 kr</span><p>2 × 45 g svenskt nötkött, cheddar, finhackad lök och gurka, senap och ketchup.</p></div>
+        <div class="item"><b>Bacon &amp; cheese</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, cheddar, bacon, Knifetown dressing, sallad, lök och tomat.</p></div>
+        <div class="item"><b>Tryffelburgare</b><span class="pr" data-dag="135 / 165 kr" data-lunch="165 / 195 kr">135 / 165 kr<small>135 g / 200 g</small></span><p>Svenskt nötkött, tryffelost och cheddar, ruccola, picklad rödlök och tryffelmajonnäs.</p></div>
+        <div class="item"><b>Svensk grillost</b><span class="pr" data-dag="125 / 155 kr" data-lunch="155 / 170 kr">125 / 155 kr<small>1 st / 2 st</small></span><p>Pankopanerad svensk grillost, vitlöksmajonnäs och picklad paprika.</p></div>
+        <div class="item"><b>Vegansk Originalet <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, vegansk ost, vegansk Knifetown dressing, gul lök och dillpicklad gurka.</p></div>
+        <div class="item"><b>Vegansk Starken <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, vegansk ost, vegansk jalapeñodressing, rödlök och färsk jalapeño.</p></div>
+        <div class="item"><b>Vegansk Tryffel <span class="v">Vegansk</span></b><span class="pr" data-dag="149 kr" data-lunch="170 kr">149 kr</span><p>Anamma vegoburgare, vegansk ost, vegansk tryffeldressing, ruccola och picklad rödlök.</p></div>
       </div>
-    </div>
-    <div class="cat">
-      <h3>Smått &amp; gott</h3>
+    </details>
+    <details class="cat" open>
+      <summary><h3>Smått &amp; gott <small>2 st</small></h3></summary>
       <div class="items">
-        <div class="item"><b>Truffle tater tots</b><span class="pr">79 kr</span><p>Tater tots (potatis), Tryffel majonnäs, Grana Padano, Persilja</p></div>
-        <div class="item no-lunch"><b>Dirty fries</b><span class="pr">75 kr</span><p>Pommes, bacon, jalapeño, Knifetown dressing och cheddarsås</p></div>
+        <div class="item"><b>Truffle tater tots</b><span class="pr">79 kr</span><p>Tater tots med tryffelmajonnäs, Grana Padano och persilja.</p></div>
+        <div class="item no-lunch"><b>Dirty fries</b><span class="pr">75 kr</span><p>Pommes med bacon, jalapeño, Knifetown dressing och cheddarsås.</p></div>
       </div>
-    </div>
-    <div class="cat">
-      <h3>Tillbehör</h3>
+    </details>
+    <details class="cat" open>
+      <summary><h3>Tillbehör <small>7 st</small></h3></summary>
       <div class="items">
         <div class="item"><b>Pommes</b><span class="pr">40 kr</span></div>
-        <div class="item"><b>Garlic Fries</b><span class="pr">75 kr</span><p>Pommes, Grana Padano, limeaioli &amp; salladslök.</p></div>
-        <div class="item no-lunch"><b>Corn ribs (4 st)</b><span class="pr">49 kr</span><p>Smör, Grana Padano ost, och kryddor.</p></div>
+        <div class="item"><b>Garlic fries</b><span class="pr">75 kr</span><p>Pommes med Grana Padano, limeaioli och salladslök.</p></div>
+        <div class="item no-lunch"><b>Corn ribs (4 st)</b><span class="pr">49 kr</span><p>Med smör, Grana Padano och kryddor.</p></div>
         <div class="item"><b>Extra kött</b><span class="pr">35 kr</span></div>
-        <div class="item"><b>Extra Ost</b><span class="pr">15 kr</span></div>
-        <div class="item"><b>Extra Jalapeno</b><span class="pr">15 kr</span></div>
+        <div class="item"><b>Extra ost</b><span class="pr">15 kr</span></div>
+        <div class="item"><b>Extra jalapeño</b><span class="pr">15 kr</span></div>
         <div class="item"><b>Dipp</b><span class="pr">20 kr</span><p>Aioli, Knifetown dressing, tryffel, chipotle eller honey mustard.</p></div>
       </div>
-    </div>
-    <div class="cat">
-      <h3>Dryck</h3>
+    </details>
+    <details class="cat" open>
+      <summary><h3>Dryck <small>3 st</small></h3></summary>
       <div class="items">
         <div class="item"><b>Läsk</b><span class="pr">29 kr</span><p>Coca-Cola, Coca-Cola Zero, Trocadero, Trocadero Zero, Sprite/7up eller Fanta Apelsin.</p></div>
         <div class="item"><b>Festis</b><span class="pr">15 kr</span><p>Jordgubb, päron eller apelsin.</p></div>
         <div class="item"><b>Milkshake</b><span class="pr">79 kr</span></div>
       </div>
-    </div>
-    <div class="cat">
-      <h3>Meny &amp; barn</h3>
+    </details>
+    <details class="cat" open>
+      <summary><h3>Meny &amp; barn <small>2 st</small></h3></summary>
       <div class="items">
-        <div class="item no-lunch"><b>Gör det till en meny</b><span class="pr">+50 kr</span><p>Lägg till pommes och dryck till din burgare</p></div>
-        <div class="item"><b>Kidsmeal</b><span class="pr">99 kr</span><p>(Burgare eller chicken nuggets), pommes &amp; en valfri festis.</p></div>
+        <div class="item no-lunch"><b>Gör det till en meny</b><span class="pr">+50 kr</span><p>Lägg till pommes och dryck till din burgare.</p></div>
+        <div class="item"><b>Kidsmeal</b><span class="pr">99 kr</span><p>Burgare eller chicken nuggets, pommes och valfri Festis.</p></div>
       </div>
-    </div>
+    </details>
+    <p class="allergy">Allergier eller specialkost? Säg till när du beställer, så berättar vi vad som går att anpassa.</p>
   </div>
 </section>
 
@@ -249,14 +263,17 @@ footer .social a:hover{color:#fff}
     <img src="../img/restaurang.jpg" alt="Matsalen hos Knifetown Burgers" loading="lazy">
     <div>
       <h2>Om oss</h2>
+      <p>Allt började 2020 med en blå foodtruck i Knivsta, därav namnet Knifetown. I dag lagar vi burgarna på Kungsängsvägen i Uppsala, men grunden är densamma: svenskt nötkött som smashas hårt på het häll, så att kanterna blir krispiga och mitten saftig.</p>
+      <h3>Sveriges 100 bästa burgare</h3>
       <ul class="awards">
-        <li class="top"><b>2024</b><span>Plats 5, Sveriges 100 bästa burgare · Årets eldsjälar</span></li>
-        <li><b>2023</b><span>Burger Dudes 5/5 · plats 5 i Sverige</span></li>
-        <li><b>2022</b><span>Burger Dudes 5/5 · plats 9 i Sverige</span></li>
-        <li><b>2021</b><span>Burger Dudes 5/5 · plats 10 i Sverige</span></li>
-        <li><b>2020</b><span>Burger Dudes 5/5 · plats 12 i Sverige</span></li>
+        <li class="top"><b>2026</b><span>Plats 7 · "Fortsatt knivskarp fingertoppskänsla"</span></li>
+        <li><b>2025</b><span>Plats 10</span></li>
+        <li><b>2024</b><span>Plats 5 · Årets eldsjälar</span></li>
+        <li><b>2023</b><span>Plats 9</span></li>
+        <li><b>2022</b><span>Plats 10</span></li>
+        <li><b>2021</b><span>Plats 12</span></li>
       </ul>
-      <a class="link" href="https://www.burgerdudes.se/sweden/knivsta/knifetown-burgers/" target="_blank" rel="noopener">Läs vår recension hos Burger Dudes →</a>
+      <a class="link" href="https://www.burgerdudes.se/sveriges-basta-burgare-2026/" target="_blank" rel="noopener">Se hela listan hos Burgerdudes →</a>
     </div>
   </div>
 </section>
@@ -289,15 +306,16 @@ footer .social a:hover{color:#fff}
         <tr data-d="6"><td>Lördag</td><td>10:00–21:00</td></tr>
         <tr data-d="0"><td>Söndag</td><td>10:00–20:00</td></tr>
       </table>
+      <a class="tel" href="tel:+46709465780">Ring 070-946 57 80</a>
     </div>
-    <iframe title="Karta till Knifetown Burgers" loading="lazy" src="https://www.google.com/maps?q=Kungs%C3%A4ngsv%C3%A4gen+19B,+753+23+Uppsala&output=embed"></iframe>
+    <div class="map" id="map"><button type="button" class="map-load"><span class="btn">Visa karta</span><small>Kartan laddas från Google Maps</small></button></div>
   </div>
 </section>
 
 <section id="kontakt">
   <div class="wrap panel">
     <h2>Kontakt</h2>
-    <p class="contact-intro">Skriv ditt meddelande så hör vi av oss så snart vi kan. Beställningar görs via knappen Beställ online, inte här.</p>
+    <p class="contact-intro">Skriv ditt meddelande så hör vi av oss så snart vi kan. Beställningar görs via knappen Beställ online, inte här. Brådskande? Ring <a href="tel:+46709465780" style="color:#fff;font-weight:600">070-946 57 80</a>.</p>
     <form id="contact-form" novalidate>
       <label class="full"><span>Typ av meddelande <span class="req">*</span></span>
         <select name="typ" required>
@@ -317,7 +335,7 @@ footer .social a:hover{color:#fff}
 
 <footer>
   <div class="wrap">
-    <span>© Knifetown Burgers · Kungsängsvägen 19B, Uppsala</span>
+    <span>© Knifetown Burgers · Kungsängsvägen 19B, Uppsala · <a href="tel:+46709465780">070-946 57 80</a></span>
     <div class="social">
       <a href="https://www.instagram.com/knifetownburgers/" target="_blank" rel="noopener">Instagram</a>
       <a href="https://www.facebook.com/profile.php?id=100063505151036" target="_blank" rel="noopener">Facebook</a>
@@ -325,7 +343,10 @@ footer .social a:hover{color:#fff}
   </div>
 </footer>
 
-<div class="orderbar"><a class="btn" href="https://qopla.com/restaurant/knifetown-burgers-/qQALLpRyEO/order" target="_blank" rel="noopener">Beställ online</a></div>
+<div class="orderbar">
+  <a class="btn" href="https://qopla.com/restaurant/knifetown-burgers-/qQALLpRyEO/order" target="_blank" rel="noopener">Beställ online</a>
+  <a class="btn dark" href="tel:+46709465780">Ring</a>
+</div>
 
 <script>
 // måndag–söndag / lunch
@@ -358,6 +379,15 @@ form.addEventListener("submit", e => {
   if (m >= 600 && m < close * 60) el.innerHTML = `<b>Öppet nu</b> · till ${close}:00`;
   else { el.classList.add("closed"); el.innerHTML = `<b>Stängt</b> · öppnar 10:00`; }
 })();
+
+// mobil: bara burgarna utfällda från start
+if (matchMedia("(max-width:760px)").matches)
+  document.querySelectorAll("details.cat").forEach((d, i) => { if (i > 0) d.open = false; });
+
+// kartan laddas först vid klick (ingen Google-spårning innan dess)
+document.querySelector(".map-load").addEventListener("click", () => {
+  document.getElementById("map").innerHTML = '<iframe title="Karta till Knifetown Burgers" src="https://www.google.com/maps?q=Kungs%C3%A4ngsv%C3%A4gen+19B,+753+23+Uppsala&output=embed"></iframe>';
+});
 </script>
 <script async src="https://www.instagram.com/embed.js"></script>
 </body>
